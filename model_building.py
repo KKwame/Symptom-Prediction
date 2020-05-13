@@ -26,6 +26,7 @@ model = GaussianNB()
 # # training the model with training sets
 model.fit(X_train, y_train)
 
+#### you can uncomment line 30 to line 32 and then comment line 39 to line 41
 #model = None
 #with open("model.pkl", "rb") as f:
     #model = pickle.load(f)
@@ -51,6 +52,7 @@ print("Accuracy:", model_accuracy_measure)
 
 #if __name__ == 'main':
     #print(model_accuracy_measure)
+    
 #loading model for testing
 model = pickle.load(open('model.pkl','rb'))
 print("Testing something:", model.predict([[1,0,1,0,1,0,1,1,1,0,1,0,1,0,1,0,0,0]]))
